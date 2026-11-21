@@ -72,7 +72,8 @@ function drawVault1() {
 
   ctx.fillStyle = '#facc15';
   ctx.font = '15px "Press Start 2P"';
-  ctx.fillText('VAULT 1: ALIGN THE GRID', canvas.width / 2, 45);
+  ctx.textAlign = 'center';
+  ctx.fillText('VAULT 1: ALIGN THE GRID', canvas.width / 2, 45,  );
 
   ctx.fillStyle = secondsLeft <= 10 ? '#ef4444' : '#38bdf8';
   ctx.font = '12px "Press Start 2P"';
@@ -172,4 +173,9 @@ canvas.addEventListener('click', (e) => {
       }
     }
   }
+});
+
+
+nextBtn.addEventListener('click', () => {
+    window.location.href = 'vault2.html';
 });

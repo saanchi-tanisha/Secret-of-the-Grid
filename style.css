@@ -60,6 +60,7 @@ button {
   cursor: pointer;
   box-shadow: 4px 4px 0px #713f12;
   transition: transform 0.1s ease;
+  
 }
 
 button:hover {

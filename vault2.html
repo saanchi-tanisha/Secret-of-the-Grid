@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault 2 - Forgotten Cipher</title>
+
+    <link rel="stylesheet" href="vault2.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="vault-wrapper">
+
+        <header class="top-bar">
+            <div class="system-name">ARCHITECT_OS v2.0</div>
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">THE ARCHITECT'S VAULT</p>
+            <h1>VAULT 02</h1>
+            <h2>THE FORGOTTEN CYPHER</h2>
+            <p class="description">
+                An ancient substitution cipher guards this transmission.
+                Inspect the message and uncover the Architect's secret.
+            </p>
+        </section>
+
+        <section class="game-hud">
+            <div>
+                <span>TIME REMAINING</span>
+                <strong id="timer">01:30</strong>
+            </div>
+
+            <div>
+                <span>ATTEMPTS LEFT</span>
+                <strong id="attempts">03</strong>
+            </div>
+        </section>
+
+        <section class="terminal-window">
+
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <span>ARCHITECT_TERMINAL.exe</span>
+            </div>
+
+            <div class="terminal-screen" id="terminal">
+
+                <div class="terminal-output" id="terminalOutput">
+                    <p class="green">> INITIALIZING ARCHITECT_OS...</p>
+                    <p class="green">> CONNECTION ESTABLISHED.</p>
+                    <p class="green">> VAULT 02 ACCESS GRANTED.</p>
+                    <p class="yellow">> ENCRYPTED MESSAGE DETECTED.</p>
+                    <br>
+                    <p class="cyan">INCOMING TRANSMISSION:</p>
+                    <h2 class="cipher-text">U F T U</h2>
+                    <p class="muted">ENCRYPTION: CAESAR CIPHER</p>
+                    <p class="muted">MESSAGE LENGTH: 4 CHARACTERS</p>
+                    <br>
+                    <p class="yellow">> TYPE 'HELP' TO VIEW COMMANDS.</p>
+                    <br>
+                </div>
+
+                <form id="terminalForm" autocomplete="off">
+                    <label for="commandInput">guest@architect:~$</label>
+
+                    <input
+                        type="text"
+                        id="commandInput"
+                        placeholder="Enter command..."
+                        autocomplete="off"
+                        spellcheck="false"
+                        autofocus
+                    >
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <div class="hint-panel">
+            <span>MISSION OBJECTIVE</span>
+            <p>
+                Every letter has been shifted ONE position forward.
+                Reverse the shift to reveal the original message.
+            </p>
+        </div>
+
+        <div id="gameMessage" class="game-message"></div>
+
+        <button id="restartBtn" class="restart-btn">
+            RESTART VAULT
+        </button>
+
+        <button id="nextVaultBtn" class="next-btn">
+            PROCEED TO VAULT 3 →
+        </button>
+
+        <footer>
+            THE ARCHITECT'S LEGACY // SYSTEM VERSION 2.0
+        </footer>
+
+    </main>
+
+    <script src="vault2.js"></script>
+
+</body>
+</html>
