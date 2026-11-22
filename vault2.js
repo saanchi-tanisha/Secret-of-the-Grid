@@ -1,10 +1,3 @@
-
-// ==========================================
-// VAULT 2 - THE FORGOTTEN CYPHER
-// ==========================================
-
-// GAME SETTINGS
-
 const CORRECT_ANSWER = "TEST";
 const SECRET_KEYWORD = "SHADOW";
 
@@ -16,7 +9,6 @@ let gameFinished = false;
 let hintUsed = false;
 
 
-// HTML ELEMENTS
 
 const terminalForm = document.getElementById("terminalForm");
 const commandInput = document.getElementById("commandInput");
@@ -29,11 +21,6 @@ const gameMessage = document.getElementById("gameMessage");
 
 const restartBtn = document.getElementById("restartBtn");
 const nextVaultBtn = document.getElementById("nextVaultBtn");
-
-
-// ==========================================
-// TERMINAL OUTPUT
-// ==========================================
 
 function printToTerminal(message, className = "green") {
 
@@ -49,10 +36,6 @@ function printToTerminal(message, className = "green") {
     terminal.scrollTop = terminal.scrollHeight;
 }
 
-
-// ==========================================
-// TIMER
-// ==========================================
 
 function startTimer() {
 
@@ -100,20 +83,11 @@ function updateTimer() {
 }
 
 
-// ==========================================
-// ATTEMPTS
-// ==========================================
-
 function updateAttempts() {
 
     attemptsDisplay.textContent =
         String(attemptsLeft).padStart(2, "0");
 }
-
-
-// ==========================================
-// COMMAND: HELP
-// ==========================================
 
 function showHelp() {
 
@@ -132,10 +106,6 @@ function showHelp() {
 }
 
 
-// ==========================================
-// COMMAND: SCAN
-// ==========================================
-
 function scanMessage() {
 
     printToTerminal("SCANNING TRANSMISSION...", "cyan");
@@ -151,10 +121,6 @@ function scanMessage() {
     printToTerminal("OR TYPE YOUR DECODED WORD DIRECTLY.");
 }
 
-
-// ==========================================
-// COMMAND: HINT
-// ==========================================
 
 function revealHint() {
 
@@ -181,10 +147,6 @@ function revealHint() {
 }
 
 
-// ==========================================
-// CAESAR CIPHER DECRYPTION
-// ==========================================
-
 function caesarDecrypt(text, shift) {
 
     return text.replace(/[a-z]/gi, letter => {
@@ -202,10 +164,6 @@ function caesarDecrypt(text, shift) {
     });
 }
 
-
-// ==========================================
-// COMMAND: DECODE
-// ==========================================
 
 function decodeMessage(answer) {
 
@@ -253,10 +211,6 @@ function decodeMessage(answer) {
 }
 
 
-// ==========================================
-// VAULT UNLOCK
-// ==========================================
-
 function unlockVault() {
 
     gameFinished = true;
@@ -292,11 +246,6 @@ function unlockVault() {
     );
 }
 
-
-// ==========================================
-// GAME OVER
-// ==========================================
-
 function endGame() {
 
     gameFinished = true;
@@ -318,11 +267,6 @@ function endGame() {
     restartBtn.style.display = "block";
 }
 
-
-// ==========================================
-// CLEAR TERMINAL
-// ==========================================
-
 function clearTerminal() {
 
     terminalOutput.innerHTML = "";
@@ -331,11 +275,6 @@ function clearTerminal() {
 
     printToTerminal("TYPE HELP TO VIEW COMMANDS.", "yellow");
 }
-
-
-// ==========================================
-// COMMAND PROCESSOR
-// ==========================================
 
 function processCommand(command) {
 
@@ -404,10 +343,6 @@ function processCommand(command) {
 }
 
 
-// ==========================================
-// TERMINAL INPUT
-// ==========================================
-
 terminalForm.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -425,9 +360,7 @@ terminalForm.addEventListener("submit", function(event) {
 });
 
 
-// ==========================================
-// RESTART GAME
-// ==========================================
+
 
 function resetVault2() {
 
@@ -471,9 +404,6 @@ function resetVault2() {
 }
 
 
-// ==========================================
-// BUTTON EVENTS
-// ==========================================
 
 restartBtn.addEventListener("click", resetVault2);
 
@@ -483,11 +413,6 @@ nextVaultBtn.addEventListener("click", () => {
         "Vault 3 is ready to be connected to your game!";
 
 });
-
-
-// ==========================================
-// START GAME
-// ==========================================
 
 updateTimer();
 
